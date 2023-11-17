@@ -13,12 +13,12 @@
   },
   "scripts": {
     "start": "http-server -c-1 -p3000",
-    "build": "node build.js",
+    "build": "node ./lib/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "akira-cn",
   "devDependencies": {
-    "esbuild": "^0.15.5",
+    "esbuild": "^0.15.18",
     "eslint": "^6.8.0",
     "eslint-config-sprite": "^1.0.6",
     "eslint-plugin-html": "^6.0.0",
