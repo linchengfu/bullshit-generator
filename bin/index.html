@@ -24,9 +24,13 @@
     <article></article>
   </main>
   <footer>改进版：<a href="https://github.com/akira-cn/bullshit-generator-js">bullshit-generator-js</a> 作者：月影</footer>
+
+  <!-- 加上type="module" 引入的js才生效(作为一个模块) -->
+  <script type="module" src="https://linchengfu.github.io/bullshit-generator/dist/index.js"></script>
+
+
   <script type="module">
-    import { generate } from 'https://akira-cn.github.io/bullshit-generator-js/lib/generator.js';
-    import { createRandomPicker } from 'https://akira-cn.github.io/bullshit-generator-js/lib/random.js';
+    const { generate, createRandomPicker, loadCorpus } = bullshitGenerator;
 
     const options = document.querySelector('.options');
     const config = { min: 2000, max: 5000 };
@@ -41,7 +45,7 @@
     const titleEl = document.getElementById('title');
 
     (async function () {
-      const corpus = await (await fetch('https://akira-cn.github.io/bullshit-generator-js/corpus/data.json')).json();
+      const corpus = await loadCorpus();
       const pickTitle = createRandomPicker(corpus.title);
       titleEl.value = pickTitle();
       generateButton.addEventListener('click', () => {
