@@ -3,11 +3,9 @@
   "version": "0.2.1",
   "description": "",
   "main": "dist/bullshit-generator.cjs",
-  "module": "index.js",
   "bin": {
     "bullshit": "./bin/index.js"
   },
-  "type": "module",
   "directories": {
     "lib": "lib"
   },
@@ -27,6 +25,7 @@
   "dependencies": {
     "command-line-args": "^5.2.1",
     "command-line-usage": "^6.1.0",
+    "mime": "^3.0.0",
     "moment": "^2.24.0"
   }
 }
