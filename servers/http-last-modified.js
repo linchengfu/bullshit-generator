@@ -7,11 +7,6 @@ import mime from 'mime'
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// const http = require('http');
-// const url = require('url');
-// const path = require('path');
-// const fs = require('fs');
-// const mime = require('mime')
 
 const server = http.createServer((req, res) => {
   // let filePath = path.resolve(__dirname, path.join('www', url.fileURLToPath(`file:///${req.url}`)));
