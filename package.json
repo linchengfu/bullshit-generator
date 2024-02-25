@@ -24,6 +24,7 @@
     "http-server": "^0.12.1"
   },
   "dependencies": {
+    "checksum": "^1.0.0",
     "command-line-args": "^5.2.1",
     "command-line-usage": "^6.1.0",
     "mime": "^4.0.1",
