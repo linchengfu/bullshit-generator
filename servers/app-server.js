@@ -4,7 +4,7 @@ import {
 
 } from "./interceptor-server.js";
 import Router from "./route.js";
-import { getCoronavirusKeyIndex } from '../lib/module/mock.js'
+import { getCoronavirusKeyIndex, getCoronavirusByDate } from '../lib/module/mock.js'
 
 const router = new Router();
 
@@ -39,7 +39,6 @@ App.use(router.get('/coronavirus/index', async ({ route, res }, next) => {
 }));
 
 App.use(router.get('/coronavirus/:date', async ({ route, res }, next) => {
-  const { getCoronavirusByDate } = await import('../lib/module/mock.js');
   const data = getCoronavirusByDate(route.date);
   res.setHeader('Content-Type', 'application/json');
   res.body = { data };
